@@ -1,0 +1,26 @@
+<div class="client-location-approval">
+    <h2>Client Location Approval</h2>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Employee</th>
+          <th>Client Name</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let request of clientLocationRequests">
+          <td>{{ request.employeeName }}</td>
+          <td>{{ request.clientName }}</td>
+          <td>{{ request.status }}</td>
+          <td>
+            <button (click)="approveRequest(request.id)" [disabled]="request.status === 'approved'">Approve</button>
+            <button (click)="rejectRequest(request.id)" [disabled]="request.status === 'rejected'">Reject</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

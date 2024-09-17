@@ -1,0 +1,26 @@
+<div class="leave-approval">
+    <h2>Leave Approval</h2>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Employee</th>
+          <th>Leave Type</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let leave of leaveApplications">
+          <td>{{ leave.employeeName }}</td>
+          <td>{{ leave.leaveType }}</td>
+          <td>{{ leave.status }}</td>
+          <td>
+            <button (click)="approveLeave(leave.id)" [disabled]="leave.status === 'approved'">Approve</button>
+            <button (click)="rejectLeave(leave.id)" [disabled]="leave.status === 'rejected'">Reject</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

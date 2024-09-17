@@ -1,0 +1,21 @@
+
+<div class="work-from-home">
+    <h1>Request Work From Home</h1>
+  
+    <form [formGroup]="workFromHomeForm" (ngSubmit)="requestWorkFromHome()">
+      <label for="employeeId">Employee ID:</label>
+      <input id="employeeId" formControlName="employeeId" type="text">
+  
+      <label for="startDate">Start Date:</label>
+    <input id="startDate" formControlName="startDate" type="date">
+
+    <label for="endDate">End Date:</label>
+    <input id="endDate" formControlName="endDate" type="date">
+  
+      <label for="reason">Reason:</label>
+      <textarea id="reason" formControlName="reason"></textarea>
+  
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+  

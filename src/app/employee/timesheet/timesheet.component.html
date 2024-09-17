@@ -1,0 +1,21 @@
+
+<div class="timesheet">
+    <h1>Submit Timesheet</h1>
+  
+    <form [formGroup]="timesheetForm" (ngSubmit)="submitTimesheet()">
+      <label for="employeeId">Employee ID:</label>
+      <input id="employeeId" formControlName="employeeId" type="text">
+  
+      <label for="date">Date:</label>
+      <input id="date" formControlName="date" type="date">
+  
+      <label for="hoursWorked">Hours Worked:</label>
+      <input id="hoursWorked" formControlName="hoursWorked" type="number">
+  
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description"></textarea>
+  
+      <button type="submit">Submit Timesheet</button>
+    </form>
+  </div>
+  

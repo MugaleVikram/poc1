@@ -1,0 +1,24 @@
+
+<div class="client-location">
+    <h1>Request Client Location</h1>
+  
+    <form [formGroup]="clientLocationForm" (ngSubmit)="requestClientLocation()">
+      <label for="employeeId">Employee ID:</label>
+      <input id="employeeId" formControlName="employeeId" type="text">
+  
+      <label for="date">Date:</label>
+      <input id="date" formControlName="date" type="date">
+  
+      <label for="clientName">Client Name:</label>
+      <input id="clientName" formControlName="clientName" type="text">
+  
+      <label for="location">Location:</label>
+      <input id="location" formControlName="location" type="text">
+  
+      <label for="purpose">Purpose:</label>
+      <textarea id="purpose" formControlName="purpose"></textarea>
+  
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+  

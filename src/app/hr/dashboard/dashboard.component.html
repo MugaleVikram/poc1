@@ -1,0 +1,40 @@
+<div class="dashboard">
+    <h2>HR Dashboard</h2>
+  
+    <div class="section">
+      <h3>Employees</h3>
+      <ul>
+        <li *ngFor="let employee of employees">
+          {{ employee.name }} ({{ employee.position }})
+        </li>
+      </ul>
+    </div>
+  
+    <div class="section">
+      <h3>Leave Requests</h3>
+      <ul>
+        <li *ngFor="let request of leaveRequests">
+          {{ request.employeeName }} - {{ request.leaveType }} - {{ request.status }}
+        </li>
+      </ul>
+    </div>
+  
+    <div class="section">
+      <h3>Work From Home Requests</h3>
+      <ul>
+        <li *ngFor="let request of workFromHomeRequests">
+          {{ request.employeeName }} - {{ request.reason }} - {{ request.status }}
+        </li>
+      </ul>
+    </div>
+  
+    <div class="section">
+      <h3>Client Location Requests</h3>
+      <ul>
+        <li *ngFor="let request of clientLocationRequests">
+          {{ request.employeeName }} - {{ request.clientName }} - {{ request.status }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  
